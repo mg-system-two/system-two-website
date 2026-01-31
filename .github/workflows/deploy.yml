@@ -18,7 +18,7 @@ jobs:
         with:
           args: --acl public-read --delete
         env:
-          AWS_S3_BUCKET: YOUR_SPACE_NAME
+          AWS_S3_BUCKET: system-two-website
           AWS_ACCESS_KEY_ID: ${{ secrets.DO_SPACES_KEY }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.DO_SPACES_SECRET }}
           AWS_REGION: us-east-1
