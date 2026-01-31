@@ -10,8 +10,15 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Check out repository
-        uses: actions/checkout@v4
+      - name: Debug secrets presence
+        run: |
+          if [ -z "${{ secrets.DO_SPACES_KEY }}" ]; then
+            echo "❌ DO_SPACES_KEY secret is NOT visible"
+          else
+            echo "✅ DO_SPACES_KEY secret IS visible"
+          fi
+
+         uses: actions/checkout@v4
 
       - name: Upload to DigitalOcean Spaces
         uses: jakejarvis/s3-sync-action@v0.5.1
