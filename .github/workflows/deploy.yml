@@ -22,5 +22,5 @@ jobs:
           AWS_ACCESS_KEY_ID: ${{ secrets.DO_SPACES_KEY }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.DO_SPACES_SECRET }}
           AWS_REGION: us-east-1
-          AWS_S3_ENDPOINT: https://YOUR_REGION.digitaloceanspaces.com
+          AWS_S3_ENDPOINT: https://sfo3.digitalocean.com
 
