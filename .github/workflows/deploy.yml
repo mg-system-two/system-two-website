@@ -8,8 +8,11 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-
+    
     steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
       - name: Debug secrets presence
         run: |
           if [ -z "${{ secrets.DO_SPACES_KEY }}" ]; then
@@ -17,8 +20,6 @@ jobs:
           else
             echo "✅ DO_SPACES_KEY secret IS visible"
           fi
-
-         uses: actions/checkout@v4
 
       - name: Upload to DigitalOcean Spaces
         uses: jakejarvis/s3-sync-action@v0.5.1
@@ -29,5 +30,6 @@ jobs:
           AWS_ACCESS_KEY_ID: ${{ secrets.DO_SPACES_KEY }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.DO_SPACES_SECRET }}
           AWS_REGION: us-east-1
-          AWS_S3_ENDPOINT: https://sfo3.digitalocean.com
+          AWS_S3_ENDPOINT: https://sfo3.digitaloceanspaces.com
+
 
