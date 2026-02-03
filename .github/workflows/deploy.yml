@@ -1,4 +1,4 @@
-name: Deploy to DigitalOcean Spaces
+name: Deploy site to server
 
 on:
   push:
@@ -8,28 +8,23 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    
+
     steps:
-      - name: Check out repository
+      - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Debug secrets presence
+      - name: Set up SSH
         run: |
-          if [ -z "${{ secrets.DO_SPACES_KEY }}" ]; then
-            echo "❌ DO_SPACES_KEY secret is NOT visible"
-          else
-            echo "✅ DO_SPACES_KEY secret IS visible"
-          fi
+          mkdir -p ~/.ssh
+          echo "${{ secrets.SSH_KEY }}" > ~/.ssh/id_ed25519
+          chmod 600 ~/.ssh/id_ed25519
+          ssh-keyscan -H ${{ secrets.SSH_HOST }} >> ~/.ssh/known_hosts
 
-      - name: Upload to DigitalOcean Spaces
-        uses: jakejarvis/s3-sync-action@v0.5.1
-        with:
-          args: --acl public-read --delete
-        env:
-          AWS_S3_BUCKET: system-two-website
-          AWS_ACCESS_KEY_ID: ${{ secrets.DO_SPACES_KEY }}
-          AWS_SECRET_ACCESS_KEY: ${{ secrets.DO_SPACES_SECRET }}
-          AWS_REGION: us-east-1
-          AWS_S3_ENDPOINT: https://sfo3.digitaloceanspaces.com
+      - name: Deploy files
+        run: |
+          rsync -avz --delete \
+            ./ \
+            ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:/var/www/html
+
 
 
