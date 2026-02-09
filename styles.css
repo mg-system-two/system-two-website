@@ -11,6 +11,7 @@ body {
   background-size: 1200px auto;
   background-position: center top;
   background-blend-mode: soft-light;
+  outline: 3px solid red;
 
   font-family: "EB Garamond", "Iowan Old Style", Georgia, serif;
 }
