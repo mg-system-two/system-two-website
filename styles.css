@@ -7,13 +7,9 @@ html, body {
 body {
   background-color: #0f2f2a; /* Prussian green */
   background-image: url("images/manuscript-inverted.png");
-  background-repeat: repeat;
-  background-size: 1200px auto;
-  background-position: center top;
-  background-blend-mode: soft-light;
-  outline: 3px solid red;
-
-  font-family: "EB Garamond", "Iowan Old Style", Georgia, serif;
+  background-repeat: no repeat;
+  background-size: contain;
+  background-position: center;
 }
 
 /* Manuscript container */
