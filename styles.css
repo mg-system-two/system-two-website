@@ -1,0 +1,55 @@
+/* Global */
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #0f2f2a; /* Prussian green */
+  background-image: url("images/manuscript-inverted.png");
+  background-repeat: repeat;
+  background-size: 1200px auto;
+  background-position: center top;
+  background-blend-mode: soft-light;
+
+  font-family: "EB Garamond", "Iowan Old Style", Georgia, serif;
+}
+
+/* Manuscript container */
+.manuscript {
+  max-width: 720px;
+  margin: 6rem auto;
+  padding: 3rem 2rem;
+  position: relative;
+}
+
+/* Vitruvian initial */
+.initial {
+  position: absolute;
+  top: 2.5rem;
+  left: 2rem;
+  width: 6rem;
+  height: 6rem;
+  opacity: 0.35;
+  pointer-events: none;
+}
+
+.initial img {
+  width: 100%;
+  height: auto;
+}
+
+/* Text */
+.text {
+  color: #cfd8d3;
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+.text p {
+  margin: 0 0 1.5rem 0;
+}
+
+.text p:first-child {
+  text-indent: 4.5rem;
+}
