@@ -1,12 +1,7 @@
-/* Global */
-html, body {
-  margin: 0;
-  padding: 0;
-}
-
 body {
   background-color: #2b2f2c;
   position: relative;
+  z-index: 0;
 }
 
 body::before {
@@ -19,46 +14,9 @@ body::before {
   background-size: 1200px auto;
   background-position: center top;
 
-  opacity: 0.07;        /* start here */
+  opacity: 0.07;
   filter: contrast(1.15) brightness(1.1);
+
   pointer-events: none;
-}
-
-/* Manuscript container */
-.manuscript {
-  max-width: 720px;
-  margin: 6rem auto;
-  padding: 3rem 2rem;
-  position: relative;
-}
-
-/* Vitruvian initial */
-.initial {
-  position: absolute;
-  top: 2.5rem;
-  left: 2rem;
-  width: 6rem;
-  height: 6rem;
-  opacity: 0.35;
-  pointer-events: none;
-}
-
-.initial img {
-  width: 100%;
-  height: auto;
-}
-
-/* Text */
-.text {
-  color: #cfd8d3;
-  font-size: 1.05rem;
-  line-height: 1.7;
-}
-
-.text p {
-  margin: 0 0 1.5rem 0;
-}
-
-.text p:first-child {
-  text-indent: 4.5rem;
+  z-index: -1;
 }
