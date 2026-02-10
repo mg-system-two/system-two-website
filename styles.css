@@ -1,7 +1,11 @@
-body {
-  background-color: #2b2f2c;
+body { 
+  background-color: transparent;
   position: relative;
   z-index: 0;
+}
+
+html {
+  background-color: #2b2f2c;
 }
 
 body::before {
