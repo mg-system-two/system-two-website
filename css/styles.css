@@ -96,21 +96,46 @@ body.hero-page {
   padding: 2rem 3.5rem 3rem;
 }
 
+/* ─── Iteration log ─────────────────────────────────────────
+   v3 (2026-03-10):
+   - gap 0.6rem → 0.25rem  (lockup felt like two separate elements)
+   - line-height 1 → 0.82  (Cormorant 'y' descender too aggressive at lh 1)
+
+   v4 (2026-03-10): precise x-height alignment (first attempt, rem-based, imprecise)
+
+   v5 (2026-03-10): x-height alignment using em units — scales with font-size
+     METHOD: align-items: flex-start (top-anchor) + margin-top on wordmark
+     CORMORANT GARAMOND hhea metrics:
+       ascender        =  0.904 × font-size above baseline
+       descender       =  0.220 × font-size below baseline
+       natural lh      =  1.124 × font-size
+       half-leading    = (0.820 − 1.124) / 2 = −0.152em
+       line-box top    =  ascender + half-leading = 0.904 − 0.152 = 0.752em above baseline
+       x-height        ≈  0.420em above baseline
+       x-height from line-box top = 0.752 − 0.420 = 0.332em
+     CALCULATION:
+       S height        =  1.4em (= 2 × cap-height, keeps cap-tops at S midpoint)
+       S centre        =  0.700em from S top
+       margin-top      =  0.700 − 0.332 = 0.368em → 0.37em
+     CONSTRAINTS MET:
+       x-height top    = S top + 0.37em + 0.332em = 0.702em ≈ S centre ✓
+       descender bottom= 0.37 + 0.752 + 0.220 = 1.342em = 118px < S height 123px ✓
+   ─────────────────────────────────────────────────────────── */
+
 .hero-lockup {
   display: flex;
-  align-items: flex-end;
-  gap: 0.6rem;
+  align-items: flex-start;
+  gap: 0.25rem;
 }
 
 
 /* ─── Dürer S Image ─────────────────────────────────────── */
 
 .logo-s-img {
-  width: clamp(4.5rem, 9vw, 6.5rem);
-  height: clamp(7rem, 14vw, 9.5rem);
+  width: clamp(3.5rem, 7vw, 5rem);
+  height: clamp(5rem, 10.5vw, 7.7rem);  /* 1.4 × wordmark font-size = 2 × cap-height */
   object-fit: contain;
   object-position: center bottom;
-  /* show the original parchment background as part of the design */
   filter: sepia(0.15) brightness(0.92);
   display: block;
   flex-shrink: 0;
@@ -120,12 +145,11 @@ body.hero-page {
   font-family: 'Cormorant Garamond', Georgia, serif;
   font-size: clamp(3.5rem, 7.5vw, 5.5rem);
   font-weight: 300;
-  font-style: italic;
   color: var(--text);
   letter-spacing: 0.04em;
-  line-height: 1;
-  /* optical: align baseline of text with bottom of S image */
-  padding-bottom: 0.06em;
+  line-height: 0.82;
+  /* 0.37em pushes text down so x-height top lands on S centre line (see log above) */
+  margin-top: 0.37em;
 }
 
 
