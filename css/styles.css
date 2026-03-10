@@ -1,16 +1,186 @@
-/* System Two - Green color scheme from Avantor PDF */
+/* System Two — Styles */
+
+/* ─── Reset & Base ─────────────────────────────────────── */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bg:          #1a3a30;
+  --bg-deep:     #122b23;
+  --text:        #e8e8e8;
+  --text-muted:  #8aab9a;
+  --accent:      #7daa98;
+  --rule:        #3d6b59;
+  --gold:        #c9a96e;
+}
+
+html, body {
+  height: 100%;
+}
 
 body {
   font-family: Arial, sans-serif;
-  margin: 0;
+  background: var(--bg);
+  color: var(--text);
   line-height: 1.6;
-  color: #e8e8e8;
-  background: #1a3a30;
 }
 
+a {
+  color: var(--text);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--accent);
+}
+
+
+/* ─── Hero Page Layout ──────────────────────────────────── */
+
+body.hero-page {
+  background: var(--bg-deep);
+}
+
+.hero-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ─── Hero Nav ──────────────────────────────────────────── */
+
+.hero-nav {
+  display: flex;
+  justify-content: flex-end;
+  gap: 2.5rem;
+  padding: 2rem 3rem;
+}
+
+.hero-nav a {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 0.85rem;
+  font-weight: 400;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  transition: color 0.2s;
+}
+
+.hero-nav a:hover {
+  color: var(--text);
+}
+
+
+/* ─── Hero Main ─────────────────────────────────────────── */
+
+.hero-main {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-lockup {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+  text-align: center;
+}
+
+
+/* ─── Logo Mark ─────────────────────────────────────────── */
+
+.hero-logo {
+  display: flex;
+  align-items: baseline;
+  line-height: 1;
+  margin-bottom: 2.5rem;
+}
+
+.logo-s {
+  font-family: 'Cormorant SC', 'Cormorant Garamond', Georgia, serif;
+  font-size: clamp(5rem, 12vw, 9rem);
+  font-weight: 300;
+  color: var(--gold);
+  letter-spacing: -0.02em;
+  line-height: 0.9;
+  position: relative;
+  /* decorative border treatment */
+  border: 1px solid var(--gold);
+  width: clamp(4.5rem, 10vw, 8rem);
+  height: clamp(4.5rem, 10vw, 8rem);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 0.15em;
+  flex-shrink: 0;
+}
+
+.logo-wordmark {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: clamp(5rem, 12vw, 9rem);
+  font-weight: 300;
+  color: var(--text);
+  letter-spacing: 0.02em;
+  line-height: 0.9;
+}
+
+
+/* ─── Accent Rule ───────────────────────────────────────── */
+
+.hero-rule {
+  width: clamp(12rem, 40vw, 28rem);
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    var(--rule) 20%,
+    var(--accent) 50%,
+    var(--rule) 80%,
+    transparent
+  );
+  margin-bottom: 2.5rem;
+}
+
+
+/* ─── Tagline ───────────────────────────────────────────── */
+
+.hero-tagline {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: clamp(0.9rem, 2.2vw, 1.15rem);
+  font-weight: 400;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+
+/* ─── Hero Footer ───────────────────────────────────────── */
+
+.hero-footer {
+  padding: 2rem 3rem;
+  text-align: center;
+}
+
+.hero-footer span {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 0.78rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--rule);
+}
+
+
+/* ─── Inner Pages ───────────────────────────────────────── */
+
 header {
-  background: #1a3a30;
-  border-bottom: 1px solid #2C5F4F;
+  background: var(--bg);
+  border-bottom: 1px solid var(--rule);
 }
 
 nav {
@@ -20,15 +190,16 @@ nav {
 }
 
 nav a {
-  margin-right: 1rem;
-  color: #e8e8e8;
+  margin-right: 1.5rem;
+  color: var(--text);
   text-decoration: none;
   font-weight: 600;
+  font-size: 0.9rem;
+  letter-spacing: 0.05em;
 }
 
 nav a:hover {
-  text-decoration: underline;
-  color: #7daa98;
+  color: var(--accent);
 }
 
 main {
@@ -39,5 +210,7 @@ main {
 
 h1 {
   margin-top: 0;
-  color: #e8e8e8;
+  color: var(--text);
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-weight: 400;
 }
