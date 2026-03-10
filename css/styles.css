@@ -97,27 +97,20 @@ body.hero-page {
 
 .hero-logo {
   display: flex;
-  align-items: baseline;
+  align-items: flex-end;
   line-height: 1;
-  margin-bottom: 2.5rem;
+  margin-bottom: 3rem;
 }
 
-.logo-s {
-  font-family: 'Cormorant SC', 'Cormorant Garamond', Georgia, serif;
-  font-size: clamp(5rem, 12vw, 9rem);
-  font-weight: 300;
-  color: var(--gold);
-  letter-spacing: -0.02em;
-  line-height: 0.9;
-  position: relative;
-  /* decorative border treatment */
-  border: 1px solid var(--gold);
-  width: clamp(4.5rem, 10vw, 8rem);
-  height: clamp(4.5rem, 10vw, 8rem);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-right: 0.15em;
+.logo-s-img {
+  height: clamp(4.8rem, 11.5vw, 8.8rem);
+  width: auto;
+  /* Invert black woodcut → warm ivory/gold on dark background */
+  filter: invert(1) sepia(0.45) saturate(1.4) brightness(0.88);
+  display: block;
+  /* optical correction: nudge down so base aligns with wordmark */
+  margin-bottom: -0.06em;
+  margin-right: -0.02em;
   flex-shrink: 0;
 }
 
@@ -127,24 +120,24 @@ body.hero-page {
   font-weight: 300;
   color: var(--text);
   letter-spacing: 0.02em;
-  line-height: 0.9;
+  line-height: 0.88;
 }
 
 
 /* ─── Accent Rule ───────────────────────────────────────── */
 
 .hero-rule {
-  width: clamp(12rem, 40vw, 28rem);
+  width: clamp(14rem, 44vw, 32rem);
   height: 1px;
   background: linear-gradient(
     to right,
     transparent,
-    var(--rule) 20%,
+    var(--rule) 15%,
     var(--accent) 50%,
-    var(--rule) 80%,
+    var(--rule) 85%,
     transparent
   );
-  margin-bottom: 2.5rem;
+  margin-bottom: 2.8rem;
 }
 
 
@@ -152,9 +145,9 @@ body.hero-page {
 
 .hero-tagline {
   font-family: 'Cormorant Garamond', Georgia, serif;
-  font-size: clamp(0.9rem, 2.2vw, 1.15rem);
+  font-size: clamp(0.78rem, 1.8vw, 1rem);
   font-weight: 400;
-  letter-spacing: 0.3em;
+  letter-spacing: 0.38em;
   text-transform: uppercase;
   color: var(--text-muted);
 }
