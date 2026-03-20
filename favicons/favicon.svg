@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
+  <rect width="100" height="100" fill="#2C5F4A"/>
+  <text
+    x="6" y="88"
+    font-family="'Times New Roman', Georgia, serif"
+    font-weight="bold"
+    font-size="88"
+    fill="#662F26">S</text>
+  <text
+    x="52" y="100"
+    font-family="'Times New Roman', Georgia, serif"
+    font-weight="bold"
+    font-size="66"
+    fill="#000000">2</text>
+</svg>
