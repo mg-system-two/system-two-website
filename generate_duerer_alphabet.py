@@ -6,7 +6,7 @@ from openai import OpenAI
 client = OpenAI()
 
 # Create output folder
-folder = "system2_duerer_caps"
+folder = "s2_circinus_illuminates"
 os.makedirs(folder, exist_ok=True)
 
 letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
@@ -38,7 +38,7 @@ for letter in letters:
     image_base64 = result.data[0].b64_json
     image_bytes = base64.b64decode(image_base64)
 
-    filename = f"{folder}/{letter}_system2_duerer_caps.png"
+    filename = f"{folder}/{letter}_s2_circinus_illuminates.png"
 
     with open(filename, "wb") as f:
         f.write(image_bytes)
