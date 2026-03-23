@@ -264,8 +264,8 @@ body.parchment-page a:hover {
 }
 
 .parchment-header {
-  background: #2f5233;
-  border-bottom: 2px solid #6b2735;
+  background: #f5f1e8;
+  border-bottom: 1px solid rgba(107, 39, 53, 0.2);
 }
 
 .parchment-nav-inner {
@@ -281,21 +281,21 @@ body.parchment-page a:hover {
   display: flex;
   align-items: center;
   gap: 0.75rem;
-  color: #f5f1e8;
+  color: #1a1a1a;
 }
 
 .parchment-logo img {
-  width: 2.2rem;
-  height: 2.2rem;
+  height: 60px;
+  width: auto;
   object-fit: contain;
 }
 
 .parchment-logo span {
-  font-family: 'Cormorant SC', Georgia, serif;
+  font-family: 'Palatino Linotype', Palatino, 'Book Antiqua', Georgia, serif;
   font-size: 1.05rem;
-  font-weight: 300;
-  letter-spacing: 0.22em;
-  color: #f5f1e8;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  color: #1a1a1a;
 }
 
 .parchment-nav {
@@ -305,26 +305,74 @@ body.parchment-page a:hover {
 }
 
 .parchment-nav a {
-  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-family: 'Palatino Linotype', Palatino, 'Book Antiqua', Georgia, serif;
   font-size: 0.9rem;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: rgba(245, 241, 232, 0.65);
+  letter-spacing: 0.05em;
+  color: #1a1a1a;
 }
 
 .parchment-nav a:hover,
 .parchment-nav a.nav-current {
-  color: #f5f1e8;
+  color: #6b2735;
 }
 
 .parchment-nav a.nav-current {
-  border-bottom: 1px solid rgba(245, 241, 232, 0.45);
+  border-bottom: 2px solid #6b2735;
 }
 
 .parchment-main {
   max-width: 760px;
   margin: 0 auto;
   padding: 4rem 2rem 6rem;
+}
+
+
+/* ─── Home Hero ─────────────────────────────────────────── */
+
+.home-main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(100vh - 100px);
+  padding: 3rem 2rem;
+}
+
+.home-hero {
+  text-align: center;
+  max-width: 800px;
+}
+
+.home-lockup {
+  display: inline-flex;
+  align-items: flex-start;
+  gap: 0.15em;
+  margin-bottom: 2rem;
+}
+
+.home-s {
+  width: clamp(3.5rem, 7vw, 5rem);
+  height: auto;
+  display: block;
+  flex-shrink: 0;
+}
+
+.home-wordmark {
+  font-family: 'Palatino Linotype', Palatino, 'Book Antiqua', Georgia, serif;
+  font-size: clamp(3.5rem, 7.5vw, 5.5rem);
+  font-weight: 500;
+  color: #6b2735;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  padding-top: 0.1em;
+}
+
+.home-tagline {
+  font-family: 'Palatino Linotype', Palatino, 'Book Antiqua', Georgia, serif;
+  font-size: clamp(0.85rem, 1.6vw, 1rem);
+  font-weight: 400;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: #2f5233;
 }
 
 
@@ -498,7 +546,8 @@ body.parchment-page a:hover {
 /* ─── Parchment Footer ──────────────────────────────────── */
 
 .parchment-footer {
-  background: #2f5233;
+  background: #f5f1e8;
+  border-top: 1px solid rgba(107, 39, 53, 0.2);
   padding: 1.75rem 2rem;
   display: flex;
   justify-content: space-between;
@@ -506,21 +555,19 @@ body.parchment-page a:hover {
 }
 
 .parchment-footer p {
-  font-family: 'Cormorant Garamond', Georgia, serif;
-  font-size: 0.82rem;
-  letter-spacing: 0.15em;
-  color: rgba(245, 241, 232, 0.6);
+  font-family: 'Palatino Linotype', Palatino, 'Book Antiqua', Georgia, serif;
+  font-size: 0.9rem;
+  color: #1a1a1a;
 }
 
 .parchment-footer a {
-  font-family: 'Cormorant Garamond', Georgia, serif;
-  font-size: 0.82rem;
-  letter-spacing: 0.15em;
-  color: #f5f1e8;
-  border-bottom: 1px solid rgba(245, 241, 232, 0.3);
+  font-family: 'Palatino Linotype', Palatino, 'Book Antiqua', Georgia, serif;
+  font-size: 0.9rem;
+  color: #6b2735;
+  border-bottom: 1px solid rgba(107, 39, 53, 0.3);
 }
 
 .parchment-footer a:hover {
-  color: #f5f1e8;
-  border-bottom-color: #f5f1e8;
+  color: #6b2735;
+  border-bottom-color: #6b2735;
 }
