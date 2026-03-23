@@ -1,6 +1,6 @@
 # System Two - Style Guide
 
-*Last updated: March 23, 2026*
+*Last updated: March 23, 2026 — v1.1*
 
 ---
 
@@ -107,22 +107,30 @@ Use a consistent rhythm based on rem units:
 
 ### Implementation
 
-**Current approach:** Image files (PNG/JPG) for each illuminated letter, floated left with text wrapping.
+**Current approach:** PNG image files in `s2_circinus_illuminates/`, displayed in a flex header alongside the scholar name and quote.
 
 ```html
-<img src="images/illuminated-F.png" alt="F" class="illuminated-cap">
-<h2 class="hero-name">Richard Feynman</h2>
-<p class="hero-quote">"What I cannot create, I do not understand."</p>
-<p class="hero-text">First paragraph wraps around the capital...</p>
+<article class="essay-section">
+  <div class="essay-header">
+    <img class="illuminated-capital" src="s2_circinus_illuminates/F_s2_circinus_illuminates.png" alt="F" />
+    <div class="essay-byline">
+      <h2 class="scholar-name">Richard Feynman</h2>
+      <blockquote class="scholar-quote">"What I cannot create, I do not understand."</blockquote>
+    </div>
+  </div>
+  <div class="essay-body">
+    <p>Body paragraphs...</p>
+  </div>
+</article>
 ```
 
 **CSS:**
 ```css
-.illuminated-cap {
-  float: left;
-  width: 120px;
-  height: 120px;
-  margin: 0 1.5rem 1rem 0;
+.illuminated-capital {
+  width: clamp(5rem, 9vw, 6.5rem);
+  height: auto;
+  flex-shrink: 0;
+  display: block;
 }
 ```
 
@@ -136,9 +144,13 @@ Use a consistent rhythm based on rem units:
 
 ### Available Letters
 
-Currently created: A, F, H
+**Illuminated capitals (uppercase):** Full alphabet A–Z in `s2_circinus_illuminates/`
+Naming convention: `{Letter}_s2_circinus_illuminates.png` — e.g. `F_s2_circinus_illuminates.png`
 
-**To add new letters:** Follow the same geometric construction approach, maintain burgundy/parchment palette, save as PNG or JPG at 120px minimum.
+**Minuscules (lowercase):** Full alphabet a–z in `s2_circinus_miniscules/`
+Naming convention: `{letter}_s2_circinus_miniscule.png` — e.g. `f_s2_circinus_miniscule.png`
+
+**To add new letters:** Follow the same geometric construction approach, maintain burgundy/parchment palette, save as PNG at 120px minimum.
 
 ---
 
@@ -183,16 +195,21 @@ Currently created: A, F, H
 **Structure for educator profiles or major content blocks:**
 
 ```html
-<section class="hero-section">
-  <img src="images/illuminated-F.png" alt="F" class="illuminated-cap">
-  <h2 class="hero-name">Name in Small Caps</h2>
-  <p class="hero-quote">"Pull quote in forest green italic"</p>
-  <p class="hero-text">Body paragraphs...</p>
-  <p class="hero-text">Continue...</p>
-</section>
+<article class="essay-section">
+  <div class="essay-header">
+    <img class="illuminated-capital" src="s2_circinus_illuminates/F_s2_circinus_illuminates.png" alt="F" />
+    <div class="essay-byline">
+      <h2 class="scholar-name">Name</h2>
+      <blockquote class="scholar-quote">"Pull quote in forest green italic"</blockquote>
+    </div>
+  </div>
+  <div class="essay-body">
+    <p>Body paragraphs...</p>
+  </div>
+</article>
 ```
 
-**First paragraph wraps around illuminated capital. Subsequent paragraphs flow normally below.**
+**Capital and byline sit side by side in a flex row. Essay body flows below.**
 
 ---
 
@@ -275,21 +292,28 @@ All styles as specified above. Optimized for ≥1024px.
 /
 ├── index.html
 ├── teaching.html
-├── domain-focus.html
 ├── programmes.html
-├── philosophy.html
-├── work-with-us.html
+├── approach.html
+├── about.html
+├── contact.html
 ├── css/
 │   └── styles.css (single stylesheet)
 ├── images/
-│   ├── system2-logomark.png
-│   ├── illuminated-A.png
-│   ├── illuminated-F.png
-│   ├── illuminated-H.png
-│   └── (other images)
-└── favicons/
-    └── (favicon files)
+│   └── system2-logomark.png
+├── s2_circinus_illuminates/
+│   └── {A-Z}_s2_circinus_illuminates.png (full alphabet)
+├── s2_circinus_miniscules/
+│   └── {a-z}_s2_circinus_miniscule.png (full alphabet)
+├── favicons/
+│   └── (favicon files)
+└── programmes/
+    ├── personal-knowledge-model.html
+    ├── analytical-foundations.html
+    ├── applied-machine-learning.html
+    └── bayesian-simulations.html
 ```
+
+**Pages not yet created:** `domain-focus.html`, `philosophy.html`, `work-with-us.html`
 
 ### CSS Approach
 
@@ -340,15 +364,21 @@ All styles as specified above. Optimized for ≥1024px.
 - Consistent burgundy headings on parchment background
 - Forest green quotes in italic
 
-### Needs Updating
+### Resolved (as of v1.1)
 
-- Current index.html uses wrong green
-- Current index.html uses Cormorant Garamond instead of Palatino
-- Navigation structure not consistent across pages
+- ~~index.html used wrong green~~ — fixed, all pages now parchment
+- ~~index.html used Cormorant Garamond~~ — fixed, Palatino throughout, no external fonts
+- ~~Navigation inconsistent across pages~~ — fixed, all pages share the same nav structure
 
 ---
 
 ## Version History
+
+**v1.1** - March 23, 2026
+- Updated illuminated capitals section: full A–Z alphabet available, actual file paths and CSS classes documented
+- Updated file organisation to reflect actual repo structure
+- Updated hero section HTML example to match implemented pattern
+- Resolved "Needs Updating" items — all pages now on parchment/Palatino with consistent nav
 
 **v1.0** - March 23, 2026
 - Initial style guide
