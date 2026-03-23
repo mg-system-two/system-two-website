@@ -1,6 +1,6 @@
 # System Two - Style Guide
 
-*Last updated: March 23, 2026 — v1.1*
+*Last updated: March 23, 2026 — v1.2*
 
 ---
 
@@ -48,9 +48,9 @@ font-family: 'Palatino Linotype', Palatino, 'Book Antiqua', Georgia, serif;
 | Element | Size | Weight | Color | Usage |
 |---------|------|--------|-------|-------|
 | **H1** (Page titles) | 2.5rem (40px) | 500 | Burgundy | One per page, top of content |
-| **H2** (Section titles) | 1.75rem (28px) | 500 | Burgundy | Major sections |
-| **H3** (Subsections) | 1.25rem (20px) | 500 | Burgundy | Minor sections, closing boxes |
-| **Hero names** | 1.5rem (24px) | 500 | Black | Educator names on teaching page |
+| **H2** (Section titles) | 1.75rem (28px) | 500 | Forest Green | Major sections |
+| **H3** (Subsections) | 1.25rem (20px) | 500 | Forest Green | Minor sections, closing boxes |
+| **Hero names** | 1.5rem (24px) | 500 | Burgundy | Educator names on teaching page |
 | **Body text** | 1rem (16px) | 400 | Black | All paragraph content |
 | **Page intro** | 1.125rem (18px) | 400 | Dark gray `#2a2a2a` | Opening paragraphs under page title |
 | **Quotes** | 1rem (16px) | 400 italic | Forest green | Pull quotes, citations |
@@ -224,18 +224,20 @@ Naming convention: `{letter}_s2_circinus_miniscule.png` — e.g. `f_s2_circinus_
 - Parchment background
 
 **Nav link states:**
-- Default: Black text
+- Default: Forest green text
 - Hover: Burgundy text
 - Current page: Burgundy text, 2px burgundy underline
 
-**Pages in nav:** Home, Domain Focus, Programmes, Teaching, Philosophy, Work With Us
+**Pages in nav:** Engineering, Programmes, Teaching, Contact
+
+**Note:** No "Home" link (logo serves this purpose). No "System Two" text beside logo (redundant).
 
 ### Footer
 
 **Minimal:**
 - Copyright notice
-- Link to "Work With Us"
-- Centered, small text (0.9rem)
+- Link to "Contact"
+- Small text (0.9rem)
 - Subtle top border matching header
 
 ---
@@ -373,6 +375,14 @@ All styles as specified above. Optimized for ≥1024px.
 ---
 
 ## Version History
+
+**v1.2** - March 23, 2026
+- Nav restructured: Engineering, Programmes, Teaching, Contact
+- Removed "Home" link (logo is the home link) and "System Two" text from logo area
+- H2/H3 headings: forest green (H1 remains burgundy)
+- Nav links default: forest green
+- Removed "How This Works in Practice" section from teaching page
+- Footer link updated to "Contact"
 
 **v1.1** - March 23, 2026
 - Updated illuminated capitals section: full A–Z alphabet available, actual file paths and CSS classes documented
