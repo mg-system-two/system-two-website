@@ -33,7 +33,12 @@
     </section>
 
     <article class="essay-section">
-      <h2 class="pillar-title">Inspectable Over Black-Box</h2>
+      <div class="essay-header">
+        <img class="illuminated-capital" src="s2_circinus_illuminates/T_s2_circinus_illuminates.png" alt="T" />
+        <div class="essay-byline">
+          <h2 class="scholar-name">Transparency</h2>
+        </div>
+      </div>
       <div class="essay-body">
         <p>When evaluating a tool, our first question is: can we see what it's doing? Closed APIs return answers without explanation. The model could be excellent or failing quietly, hallucinating with confidence or reasoning carefully. There's no way to verify, debug, or understand the process. This opacity compounds when you need to learn: proprietary platforms gate their knowledge behind expensive certifications and paywalled documentation, while open-source tools are documented freely across community forums, GitHub discussions, and Stack Overflow.</p>
         <p>We choose tools we can inspect and verify. Mistral's weights are open, llama.cpp's inference code is readable, Qdrant's vector search is documented and auditable. When something breaks or behaves unexpectedly, we can look inside and understand why. When we need to learn or teach, the knowledge is freely available and community-maintained. This isn't ideology—it's practical necessity. Transparency enables both diagnostic capability and teaching depth. Tools that hide their internals don't make the cut.</p>
@@ -41,7 +46,12 @@
     </article>
 
     <article class="essay-section">
-      <h2 class="pillar-title">Self-Hosted Over Cloud APIs</h2>
+      <div class="essay-header">
+        <img class="illuminated-capital" src="s2_circinus_illuminates/O_s2_circinus_illuminates.png" alt="O" />
+        <div class="essay-byline">
+          <h2 class="scholar-name">Ownership</h2>
+        </div>
+      </div>
       <div class="essay-body">
         <p>Cloud APIs are seductive: send your data, receive results, pay per use. But convenience has costs. Where does your data actually go? Many services use submissions to improve their models—your proprietary documents, customer queries, and internal knowledge could resurface in another company's results. Even services that promise not to train on your data still process it on their infrastructure, subject to their security practices, their jurisdictions, and potential legal demands you can't control.</p>
         <p>We run infrastructure we control. Qdrant on our servers, Mistral processing queries locally, embeddings generated in our environment—nothing leaves our network. There are no third-party processors, no ambiguous terms of service, no wondering whether competitive advantage is leaking into someone else's training corpus. The trade-off is operational responsibility: we maintain the systems, handle updates, ensure uptime. But the gain is complete data sovereignty. For domains like healthcare, legal work, defense research, or competitive intelligence, this isn't optional. Self-hosting is the inclusion criterion; cloud-only tools are excluded.</p>
@@ -49,7 +59,12 @@
     </article>
 
     <article class="essay-section">
-      <h2 class="pillar-title">Open Licenses Over Proprietary Traps</h2>
+      <div class="essay-header">
+        <img class="illuminated-capital" src="s2_circinus_illuminates/O_s2_circinus_illuminates.png" alt="O" />
+        <div class="essay-byline">
+          <h2 class="scholar-name">Openness</h2>
+        </div>
+      </div>
       <div class="essay-body">
         <p>Vendor lock-in doesn't announce itself. It accumulates gradually. You start with a convenient API, build features that depend on it, write code against proprietary interfaces. Eventually you realize that switching would require rewriting your entire application. Some vendors make this explicit: free tiers with hobbled features, enterprise tiers with the capabilities you actually need, pricing that escalates as your usage grows. Others trap you through proprietary query languages, closed data formats, or features available only in their managed service—community editions that work until you hit production scale.</p>
         <p>We choose tools with genuinely open licenses: Apache 2.0 and MIT. Qdrant's feature parity between self-hosted and cloud isn't a marketing claim—it's verifiable in their codebase and confirmed by independent sources. Mistral's model weights are yours to run anywhere. PostgreSQL and Apache AGE give us graph capabilities without the GPL/Enterprise licensing splits that can quietly become lock-ins of their own. Learning to build on open infrastructure means the principles transfer: knowledge works regardless of where you deploy. Vendor-neutral choices preserve your ability to move, negotiate, and adapt when requirements change. Proprietary licenses and freemium traps are exclusion criteria.</p>
@@ -57,7 +72,12 @@
     </article>
 
     <article class="essay-section">
-      <h2 class="pillar-title">Internal Capability Over Dependency</h2>
+      <div class="essay-header">
+        <img class="illuminated-capital" src="s2_circinus_illuminates/C_s2_circinus_illuminates.png" alt="C" />
+        <div class="essay-byline">
+          <h2 class="scholar-name">Capability</h2>
+        </div>
+      </div>
       <div class="essay-body">
         <p>Loss of agency is distinct from vendor lock-in. You might technically be able to leave a platform, but you've lost the capacity to act independently. When a bug affects your use case, you file a ticket and wait. When you need a feature the vendor doesn't prioritize, you're stuck. When compliance demands on-premise deployment, you discover it's impossible. When the vendor pivots strategy or raises prices, you have no leverage. This dependency isn't unique to platforms—it applies equally to consultancies. Hiring experts to build your system is faster than learning to build it yourself, but when those experts leave, the knowledge walks out with them.</p>
         <p>We teach you to build your own capability, not rent someone else's. Open-source tools mean you can fork, patch, and extend when needed. Self-hosting means you can deploy anywhere: public cloud, private data centers, air-gapped environments. Building instead of buying takes longer upfront, but you retain permanent agency. You're not waiting for vendor roadmaps or consultant availability. The capability stays in your team. You can maintain, adapt, and evolve your systems independently for as long as they remain valuable. This is the core inclusion criterion: does this choice build capability in our team, or does it create dependency? We choose capability.</p>
