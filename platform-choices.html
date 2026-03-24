@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Platform Choices — System Two</title>
+  <meta name="description" content="Why we choose open-source, self-hosted tools over proprietary platforms." />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body class="parchment-page">
+
+  <header class="parchment-header">
+    <div class="parchment-nav-inner">
+      <a href="index.html" class="parchment-logo">
+        <img src="images/system2-logomark.png" alt="System Two" />
+      </a>
+      <nav class="parchment-nav">
+        <a href="#">Engineering</a>
+        <a href="teaching-approach.html">Teaching Approach</a>
+        <a href="platform-choices.html" class="nav-current">Platform Choices</a>
+        <a href="programmes.html">Programmes</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="parchment-main">
+
+    <section class="page-intro">
+      <h1>Platform Choices</h1>
+      <p class="intro-lead">Every platform choice carries risk.</p>
+      <p>We choose open tools not from ideology, but from hard-won understanding of what goes wrong when you don't. These four criteria determine which tools make it into our stack and which we exclude.</p>
+    </section>
+
+    <article class="essay-section">
+      <h2 class="pillar-title">Inspectable Over Black-Box</h2>
+      <div class="essay-body">
+        <p>When evaluating a tool, our first question is: can we see what it's doing? Closed APIs return answers without explanation. The model could be excellent or failing quietly, hallucinating with confidence or reasoning carefully. There's no way to verify, debug, or understand the process. This opacity compounds when you need to learn: proprietary platforms gate their knowledge behind expensive certifications and paywalled documentation, while open-source tools are documented freely across community forums, GitHub discussions, and Stack Overflow.</p>
+        <p>We choose tools we can inspect and verify. Mistral's weights are open, llama.cpp's inference code is readable, Qdrant's vector search is documented and auditable. When something breaks or behaves unexpectedly, we can look inside and understand why. When we need to learn or teach, the knowledge is freely available and community-maintained. This isn't ideology—it's practical necessity. Transparency enables both diagnostic capability and teaching depth. Tools that hide their internals don't make the cut.</p>
+      </div>
+    </article>
+
+    <article class="essay-section">
+      <h2 class="pillar-title">Self-Hosted Over Cloud APIs</h2>
+      <div class="essay-body">
+        <p>Cloud APIs are seductive: send your data, receive results, pay per use. But convenience has costs. Where does your data actually go? Many services use submissions to improve their models—your proprietary documents, customer queries, and internal knowledge could resurface in another company's results. Even services that promise not to train on your data still process it on their infrastructure, subject to their security practices, their jurisdictions, and potential legal demands you can't control.</p>
+        <p>We run infrastructure we control. Qdrant on our servers, Mistral processing queries locally, embeddings generated in our environment—nothing leaves our network. There are no third-party processors, no ambiguous terms of service, no wondering whether competitive advantage is leaking into someone else's training corpus. The trade-off is operational responsibility: we maintain the systems, handle updates, ensure uptime. But the gain is complete data sovereignty. For domains like healthcare, legal work, defense research, or competitive intelligence, this isn't optional. Self-hosting is the inclusion criterion; cloud-only tools are excluded.</p>
+      </div>
+    </article>
+
+    <article class="essay-section">
+      <h2 class="pillar-title">Open Licenses Over Proprietary Traps</h2>
+      <div class="essay-body">
+        <p>Vendor lock-in doesn't announce itself. It accumulates gradually. You start with a convenient API, build features that depend on it, write code against proprietary interfaces. Eventually you realize that switching would require rewriting your entire application. Some vendors make this explicit: free tiers with hobbled features, enterprise tiers with the capabilities you actually need, pricing that escalates as your usage grows. Others trap you through proprietary query languages, closed data formats, or features available only in their managed service—community editions that work until you hit production scale.</p>
+        <p>We choose tools with genuinely open licenses: Apache 2.0 and MIT. Qdrant's feature parity between self-hosted and cloud isn't a marketing claim—it's verifiable in their codebase and confirmed by independent sources. Mistral's model weights are yours to run anywhere. PostgreSQL and Apache AGE give us graph capabilities without the GPL/Enterprise split that plagues Neo4j. Learning to build on open infrastructure means the principles transfer: knowledge works regardless of where you deploy. Vendor-neutral choices preserve your ability to move, negotiate, and adapt when requirements change. Proprietary licenses and freemium traps are exclusion criteria.</p>
+      </div>
+    </article>
+
+    <article class="essay-section">
+      <h2 class="pillar-title">Internal Capability Over Dependency</h2>
+      <div class="essay-body">
+        <p>Loss of agency is distinct from vendor lock-in. You might technically be able to leave a platform, but you've lost the capacity to act independently. When a bug affects your use case, you file a ticket and wait. When you need a feature the vendor doesn't prioritize, you're stuck. When compliance demands on-premise deployment, you discover it's impossible. When the vendor pivots strategy or raises prices, you have no leverage. This dependency isn't unique to platforms—it applies equally to consultancies. Hiring experts to build your system is faster than learning to build it yourself, but when those experts leave, the knowledge walks out with them.</p>
+        <p>We teach you to build your own capability, not rent someone else's. Open-source tools mean you can fork, patch, and extend when needed. Self-hosting means you can deploy anywhere: public cloud, private data centers, air-gapped environments. Building instead of buying takes longer upfront, but you retain permanent agency. You're not waiting for vendor roadmaps or consultant availability. The capability stays in your team. You can maintain, adapt, and evolve your systems independently for as long as they remain valuable. This is the core inclusion criterion: does this choice build capability in our team, or does it create dependency? We choose capability.</p>
+      </div>
+    </article>
+
+    <section class="closing-section">
+      <h2>Our Stack in Practice</h2>
+      <p>These four criteria—inspectability, self-hosting, open licensing, and capability building—determine which tools make it into our stack and which we exclude. The result: llama.cpp (MIT), Mistral (Apache 2.0), Qdrant (Apache 2.0), PostgreSQL (PostgreSQL License), Apache AGE (Apache 2.0). Every tool inspectable, self-hostable, openly licensed, and chosen to build your capability rather than our dependency.</p>
+    </section>
+
+  </main>
+
+  <footer class="parchment-footer">
+    <p>© 2026 System Two. All rights reserved.</p>
+    <a href="contact.html">Contact</a>
+  </footer>
+
+</body>
+</html>

@@ -418,6 +418,14 @@ body.parchment-page a:hover {
   border-bottom: none;
 }
 
+.pillar-title {
+  font-size: 1.75rem;
+  font-weight: 500;
+  color: #6b2735;
+  margin-bottom: 1rem;
+  letter-spacing: normal;
+}
+
 .essay-header {
   display: flex;
   align-items: flex-start;
