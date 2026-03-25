@@ -320,6 +320,14 @@ body.parchment-page a:hover {
   border-bottom: 2px solid #6b2735;
 }
 
+.parchment-nav .nav-disabled {
+  font-family: 'Palatino Linotype', Palatino, 'Book Antiqua', Georgia, serif;
+  font-size: 0.9rem;
+  letter-spacing: 0.05em;
+  color: rgba(26, 26, 26, 0.28);
+  cursor: default;
+}
+
 .parchment-main {
   max-width: 760px;
   margin: 0 auto;
