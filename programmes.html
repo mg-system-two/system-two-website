@@ -31,14 +31,95 @@
   </header>
 
   <main class="parchment-main">
-    <h1>Programmes</h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer non sem ut tortor dictum varius. Sed hendrerit, nisl sed iaculis malesuada, erat mauris faucibus mi, vel consequat lorem est ac justo.</p>
-    <ul class="programme-list">
-      <li><a href="programmes/personal-knowledge-model.html">Personal Knowledge Modelling</a></li>
-      <li><a href="programmes/analytical-foundations.html">Analytical Foundations</a></li>
-      <li><a href="programmes/applied-machine-learning.html">Applied Machine Learning</a></li>
-      <li><a href="programmes/bayesian-simulations.html">Bayesian Simulations</a></li>
-    </ul>
+
+    <section class="page-intro">
+      <h1>Programmes</h1>
+      <p class="intro-lead">Five programmes, each complete in itself.</p>
+      <p>Each programme is built around a coherent domain of knowledge and a specific set of practical skills. They can be taken individually or in sequence, depending on where a learner is starting from and where they need to go.</p>
+    </section>
+
+    <article class="essay-section">
+      <div class="essay-header">
+        <img class="illuminated-capital" src="s2_circinus_illuminates/P_s2_circinus_illuminates.png" alt="P" />
+        <div class="essay-byline">
+          <h2 class="scholar-name">Personal Knowledge Management</h2>
+        </div>
+      </div>
+      <div class="essay-body">
+        <p>The Personal Knowledge Management programme teaches learners to build and operate their own language model system, rather than relying on external tools. The focus is practical: by the end of the programme, each participant has a working personal or team LLM that can ingest documents, retrieve relevant information, and support structured workflows.</p>
+        <p>The system is built from first principles using an open stack. Learners deploy a Mistral 7B model via llama.cpp, create embeddings, and store them in a vector database such as Qdrant. They design ingestion pipelines that transform raw documents into structured, searchable representations, paying close attention to chunking strategy, metadata, and identifier management. From there, they implement retrieval-augmented generation (RAG), constructing prompts that combine retrieved context with user queries to produce grounded responses.</p>
+        <p>Beyond basic question answering, the programme introduces orchestration. Using a lightweight API layer, learners build workflows that combine retrieval with computation or external tools. Extensions such as reranking, knowledge graphs, and simple agent loops are introduced where they add value, alongside methods for evaluating retrieval quality and response accuracy.</p>
+        <p>Throughout, the emphasis is on understanding system behaviour. Learners examine common failure modes—poor retrieval, hallucination, silent degradation—and develop strategies to diagnose and correct them. All components are treated as replaceable, ensuring the system can evolve as requirements change.</p>
+        <p>The result is a fully owned, extensible knowledge system and a clear understanding of how and why it works.</p>
+      </div>
+    </article>
+
+    <article class="essay-section">
+      <div class="essay-header">
+        <img class="illuminated-capital" src="s2_circinus_illuminates/D_s2_circinus_illuminates.png" alt="D" />
+        <div class="essay-byline">
+          <h2 class="scholar-name">Data &amp; Decision Foundations</h2>
+        </div>
+      </div>
+      <div class="essay-body">
+        <p>This programme provides a comprehensive introduction to data, computing, and analytical thinking through the practical medium of spreadsheeting software. It is designed to establish the core skills required for business analysis while preparing learners for progression into more advanced scientific and modelling programmes.</p>
+        <p>The content covers the full lifecycle of working with data: acquisition, structuring, cleaning, manipulation, and reporting. Learners develop fluency in tabular data operations, formula design, and reproducible workflows within their organisation's existing spreadsheet environment. From there, the programme introduces charting and visualisation, focusing on how to represent information clearly and support decision-making.</p>
+        <p>Teaching is anchored in a corporate finance workflow. Financial statements, cash flow modelling, and performance analysis provide the context through which learners engage with data. This grounds abstract concepts—such as aggregation, transformation, and feature construction—in real business problems. Alongside this, learners are introduced to foundational ideas in computing, including logic, structure, and the disciplined organisation of analytical work.</p>
+        <p>The programme also introduces basic predictive methods, particularly in the context of financial time series. Learners explore simple forecasting approaches, understand their assumptions, and learn how to evaluate their usefulness in decision-making settings.</p>
+        <p>Throughout, the emphasis is on principles rather than tools. By the end of the programme, learners are able to work confidently with data, construct meaningful analyses, and support business decisions with clear, well-structured outputs.</p>
+      </div>
+    </article>
+
+    <article class="essay-section">
+      <div class="essay-header">
+        <img class="illuminated-capital" src="s2_circinus_illuminates/D_s2_circinus_illuminates.png" alt="D" />
+        <div class="essay-byline">
+          <h2 class="scholar-name">Data Science &amp; Data Engineering</h2>
+        </div>
+      </div>
+      <div class="essay-body">
+        <p>This programme provides a rigorous introduction to data science and data engineering, centred on the systematic use of the Python scientific computing ecosystem. It develops the theoretical and practical foundations required to design, implement, and evaluate predictive models within well-structured analytical workflows.</p>
+        <p>Learners work within a Python environment and engage directly with core libraries used for modelling and data processing. The programme covers the full modelling lifecycle: data ingestion, transformation, and feature engineering; construction of reproducible pipelines; and the disciplined application of training, validation, and testing procedures. Particular emphasis is placed on the correct use of train–test splits, cross-validation, and performance metrics appropriate to the problem context.</p>
+        <p>Model development is treated as a process of statistical estimation and generalisation. Learners implement and compare a range of supervised learning methods for both regression and classification, examining their assumptions, limitations, and behaviour under different data conditions. Attention is given to issues such as bias–variance trade-offs, overfitting, data leakage, and the impact of feature construction on model performance.</p>
+        <p>In parallel, the programme introduces core data engineering concepts required to support analytical systems. Learners design and build pipelines that integrate preprocessing, modelling, and evaluation into coherent, repeatable processes, ensuring consistency between development and deployment settings.</p>
+        <p>Throughout, libraries are treated as formal implementations of underlying principles rather than as tools to be applied heuristically. By the end of the programme, learners are able to construct robust machine learning workflows, justify methodological choices, and critically evaluate model performance.</p>
+      </div>
+    </article>
+
+    <article class="essay-section">
+      <div class="essay-header">
+        <img class="illuminated-capital" src="s2_circinus_illuminates/A_s2_circinus_illuminates.png" alt="A" />
+        <div class="essay-byline">
+          <h2 class="scholar-name">Advanced Statistical Modelling</h2>
+        </div>
+      </div>
+      <div class="essay-body">
+        <p>This programme provides an advanced and rigorous treatment of statistical modelling grounded in the Bayesian approach. It is concerned not with the routine application of methods, but with the construction of coherent explanations of real-world processes. The emphasis throughout is on understanding how models encode assumptions, how those assumptions relate to data-generating mechanisms, and how inference supports reasoning under uncertainty.</p>
+        <p>The programme begins from first principles. Statistical models are introduced as formal representations of hypotheses about how data arises. Learners develop a working understanding of priors, likelihoods, and posterior distributions through simulation and iterative model building. Inference is framed as the comparison of competing models, with attention given to how different assumptions lead to different conclusions.</p>
+        <p>A central component of the programme is causal reasoning. Learners are introduced to directed acyclic graphs (DAGs) as a formal language for representing causal structure. These are used to reason about confounding, mediation, and selection effects, and to distinguish between correlation and causation in a precise and operational way. The use of DAGs is essential for designing statistical investigations, particularly where intervention or decision-making is involved.</p>
+        <p>Building on this foundation, the programme progresses to more expressive model classes. Learners work with generalised linear models and hierarchical (multilevel) models, examining how partial pooling improves estimation and how structure reflects real-world dependencies. Computational methods for approximating posterior distributions are introduced as necessary tools for working with complex models.</p>
+        <p>Computation is used as a means of thinking. Learners construct synthetic data, perform prior and posterior predictive checks, and use these techniques to diagnose model behaviour and assess adequacy. Modelling is treated as an iterative process of proposal, evaluation, and refinement.</p>
+        <p>By the end of the programme, learners are able to formulate, implement, and evaluate probabilistic models, reason explicitly about causation, and apply statistical methods in a disciplined and transparent manner.</p>
+      </div>
+    </article>
+
+    <article class="essay-section">
+      <div class="essay-header">
+        <img class="illuminated-capital" src="s2_circinus_illuminates/N_s2_circinus_illuminates.png" alt="N" />
+        <div class="essay-byline">
+          <h2 class="scholar-name">Nonlinear Dynamics &amp; Complex Systems</h2>
+        </div>
+      </div>
+      <div class="essay-body">
+        <p>This programme provides an advanced study of nonlinear systems, focusing on the behaviour of complex, dynamic processes that cannot be adequately understood through linear models. It addresses the limitations of approaches that assume stability and proportionality, and instead examines systems characterised by feedback, interaction, and emergence.</p>
+        <p>The programme begins with the foundations of dynamical systems. Learners study differential equations, equilibrium states, and stability, before progressing to phase space analysis as a primary tool for understanding system behaviour. Systems are analysed both geometrically and analytically, with attention given to trajectories and long-term dynamics.</p>
+        <p>From this basis, the programme introduces bifurcation theory: how small changes in parameters can lead to qualitative shifts in system behaviour. Learners examine transitions between regimes and develop the ability to recognise these patterns in applied settings. A central concept is extreme sensitivity to initial conditions, where small differences at the outset can lead to radically different outcomes, limiting predictability even in deterministic systems.</p>
+        <p>The programme also explores mechanisms such as feedback loops, self-reinforcement, and network effects. Learners analyse how interactions between components can amplify signals, create lock-in, and generate cascading behaviour across systems. These ideas are essential for understanding real-world phenomena in which outcomes emerge from interconnected processes rather than isolated variables.</p>
+        <p>Chaos is introduced as a structured form of apparent randomness. Learners study systems that exhibit irregular behaviour and use concepts such as attractors and phase portraits to identify underlying order. Computation and visualisation play a central role, with learners constructing and exploring systems through simulation and numerical methods.</p>
+        <p>By the end of the programme, learners are able to analyse nonlinear systems, identify regimes of stability and instability, and reason about emergence, feedback, and unpredictability in complex environments.</p>
+      </div>
+    </article>
+
   </main>
 
   <footer class="parchment-footer">
