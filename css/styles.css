@@ -383,6 +383,16 @@ body.parchment-page a:hover {
   color: #2f5233;
 }
 
+.home-intro {
+  max-width: 520px;
+  margin: 2rem auto 0;
+  font-family: 'Palatino Linotype', Palatino, 'Book Antiqua', Georgia, serif;
+  font-size: clamp(0.9rem, 1.5vw, 1rem);
+  line-height: 1.7;
+  color: #3a3028;
+  text-align: left;
+}
+
 
 /* ─── Page Intro ────────────────────────────────────────── */
 
